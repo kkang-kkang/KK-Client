@@ -26,14 +26,19 @@ const PromotionVideo = () => {
   }, []);
 
   useEffect(() => {
+    videoplay();
+  }, [srcIdx, video]);
+
+  const videoplay = async () => {
     if (video) {
       video.src = src[srcIdx];
-      video.load();
+      await video.load();
       video.play();
     }
-  }, [srcIdx, video]);
+  };
+
   return (
-    <S.video onEnded={onEnded} id="video" muted autoPlay>
+    <S.video onEnded={onEnded} id="video" preload="metadata" muted autoPlay>
       <source src={src[srcIdx]} />
     </S.video>
   );

@@ -86,7 +86,7 @@ const style = css`
     margin: 0;
     box-sizing: border-box;
     font-family: Pretendard;
-    color: #000;
+    color: #fff;
   }
   img {
     -webkit-user-select: none;
@@ -107,7 +107,7 @@ const style = css`
     background-color: #000;
   }
 
-  color: #000;
+  color: #fff;
 `;
 
 const Theme = `
