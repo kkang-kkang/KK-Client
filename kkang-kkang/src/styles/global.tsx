@@ -104,7 +104,19 @@ const style = css`
     text-decoration-line: none;
   }
   body {
-    background-color: #000;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 179, 1) 31%,
+      rgba(0, 134, 255, 1) 100%
+    );
+  }
+  input::placeholder {
+    color: gray;
+  }
+  input:focus {
+    outline: none;
   }
 
   color: #fff;

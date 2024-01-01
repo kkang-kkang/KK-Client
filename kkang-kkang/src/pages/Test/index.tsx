@@ -1,26 +1,28 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import { API } from "../../API/API";
+import Header from "../../components/header";
 
 const Test = () => {
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   const sid = "WFdgrh2Xwl85EHyDAAAB";
-  const [nickname, setNickname] = useState<string>();
+  const [balance, setBalance] = useState<number>();
 
   useEffect(() => {
     getNick();
   }, []);
 
   const getNick = async () => {
-    const _response = await API({
+    const publicKey = localStorage.getItem("kkang-public-key");
+    await axios({
       method: "get",
-      url: `/nodes/${sid}`,
-    });
-    setNickname(_response.data.nickname);
+      url: `${baseUrl}/get-balance?addr=${publicKey}`,
+    }).then((res) => setBalance(res.data.balance));
   };
 
   return (
     <div>
-      <div>sid 값 : {sid}</div>
-      <div>GetNickName 반환값 : {nickname}</div>
+      <Header />
+      <div>보유 자산 : {balance}</div>
     </div>
   );
 };

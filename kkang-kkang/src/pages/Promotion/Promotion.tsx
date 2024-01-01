@@ -1,21 +1,29 @@
-import { useEffect, useState } from "react";
 import * as S from "./style";
 import PromotionVideo from "./PromotionVideo";
 import { Link } from "react-router-dom";
+import Header from "../../components/header";
+import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
+import { easterEgg } from "../../atoms/state";
 
 const PromotionPage = () => {
+  const [clicks, setClicks] = useState<number>(0);
+  const [ea, setEa] = useRecoilState(easterEgg);
+
+  useEffect(() => {
+    if (clicks == 30) {
+      setEa(true);
+    }
+  }, [clicks]);
+
   return (
     <S.Promotion>
       <S.PromotionContainer>
-        <S.Header>
-          <Link to="">새 거래 만들기</Link>
-          <Link to="">거래 찾기</Link>
-          <Link to="">블럭 찾기</Link>
-          <Link to="">블럭 리스트</Link>
-          <Link to="">프로필</Link>
-        </S.Header>
+        <Header />
         <div>
-          <S.PromotionTitle>KKANG KKANG COIN</S.PromotionTitle>
+          <S.PromotionTitle onClick={() => setClicks(clicks + 1)}>
+            KKANG KKANG COIN
+          </S.PromotionTitle>
           <S.PromotionDesc>
             이제는, 볼록체인 기반의 깡깡코인을 경험해볼 시간.
           </S.PromotionDesc>

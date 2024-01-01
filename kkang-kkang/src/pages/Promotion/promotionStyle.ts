@@ -5,7 +5,8 @@ export const PromotionContainer = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 `;
 
@@ -28,4 +29,9 @@ export const H1 = styled.h1`
   );
   color: transparent;
   -webkit-background-clip: text;
+`;
+
+export const prev = styled.div`
+  font-size: 32px;
+  cursor: pointer;
 `;

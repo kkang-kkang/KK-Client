@@ -26,22 +26,6 @@ export const PromotionContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Header = styled.header`
-  width: 100vw;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 1em;
-
-  a {
-    font-size: 32px;
-    display: block;
-  }
-
-  a:hover {
-    color: gray;
-  }
-`;
-
 export const PromotionTitle = styled.h1`
   font-size: 140px;
   color: #fff;
@@ -91,10 +75,12 @@ export const PromotionDesc = styled.p`
 export const A = styled.div`
   width: 10em;
   font-size: 30px;
+  height: 1.5em;
   background-color: #fff;
   text-align: center;
   border-radius: 1em;
   cursor: pointer;
+  line-height: 1.5em;
   a {
     color: #000;
     font-weight: 600;
