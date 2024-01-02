@@ -25,7 +25,7 @@ const PromotionPage = () => {
             KKANG KKANG COIN
           </S.PromotionTitle>
           <S.PromotionDesc>
-            이제는, 볼록체인 기반의 깡깡코인을 경험해볼 시간.
+            이제는, 블록체인 기반의 깡깡코인을 경험해볼 시간.
           </S.PromotionDesc>
         </div>
         <div>
@@ -33,7 +33,7 @@ const PromotionPage = () => {
             <Link to="/key-pair">지갑 만들러가기</Link>
           </S.A>
           <S.Adesc>
-            <Link to="/trade">이미 지갑이 있습니까?</Link>
+            <Link to="/new-tx">이미 지갑이 있습니까? 바로 거래 시작하기</Link>
           </S.Adesc>
         </div>
       </S.PromotionContainer>

@@ -13,16 +13,8 @@ const KeyPair = () => {
   const [onData, setOnData] = useState<boolean>(false);
   const [data, setData] = useState<dataType | undefined>();
 
-  useEffect(() => {
-    console.log(data?.private_key.length);
-    console.log(data?.public_key.length);
-    console.log(
-      "0ef086bef095156aaff1d5d4963f9c127faf36a1952b65a3557b733f9e614e33".length
-    );
-  }, [data]);
-
   const onKeyPairClick = async () => {
-    const _response = await axios({
+    await axios({
       method: "get",
       url: `${baseUrl}/key-pair`,
       headers: {
