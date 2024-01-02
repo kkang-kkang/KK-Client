@@ -120,6 +120,7 @@ const style = css`
   }
 
   color: #fff;
+  font-weight: 200;
 `;
 
 const Theme = `

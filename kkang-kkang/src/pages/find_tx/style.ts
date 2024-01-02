@@ -21,10 +21,10 @@ export const Input = styled.input`
 `;
 
 export const Title = styled.div`
+  font-weight: 800;
   font-size: 48px;
   margin-top: 1em;
   text-align: center;
-  font-weight: 800;
 `;
 
 export const Button = styled.button`
