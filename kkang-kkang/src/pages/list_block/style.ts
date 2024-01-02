@@ -3,15 +3,21 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 `;
 
 export const Flex = styled.div`
-  height: 80vh;
+  height: 13em;
+  width: 75em;
+  border: 1px solid #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 1em;
+`;
+
+export const BlockNum = styled.div`
+  font-size: 32px;
 `;
 
 export const Title = styled.div`
@@ -60,5 +66,5 @@ export const Button = styled.button`
 
 export const Header = styled.div`
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 200;
 `;
