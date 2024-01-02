@@ -54,7 +54,7 @@ const FindBlock = () => {
   return (
     <>
       <Header />
-      <S.Title>불럭 찾기</S.Title>
+      <S.Title>블럭 찾기</S.Title>
       <S.Container>
         {onSearch ? (
           <>
