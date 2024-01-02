@@ -1,5 +1,4 @@
-import { useRecoilState } from "recoil";
-import "./App.css";
+import { useRecoilValue } from "recoil";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Promotion from "./pages/Promotion";
 import GlobalStyle from "./styles/global";
@@ -12,7 +11,7 @@ import FindBlock from "./pages/find_block";
 import ListBlock from "./pages/list_block";
 
 function App() {
-  const [ea, setEa] = useRecoilState(easterEgg);
+  const ea = useRecoilValue(easterEgg);
 
   return (
     <>
